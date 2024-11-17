@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecormence store</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+  <style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+}
+    header{
+       position:fixed;
+       width: 100%;
+       left:0;
+       z-index: 1000;
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+       padding:20px 10%;
+    }
+    .logo{
+      font-size: 24px;
+      font-weight: 600;
+      color: black;
+    }
+         .logo:hover{
+          color: #EE1C47;
+         }
+        .navmenu{
+          display: flex;
+
+        }
+        .navmenu a{
+          font-size:24px;
+          font-weight: 400;
+          text-transform: capitalize;
+          padding: 10px 20px;
+          transform: all 4s ease;
+          color: #2c2c2c;
+        } 
+        .navmenu a:hover{
+          color:#EE1C47;
+        }
+        
+        
+        .navicon a{
+          font-size:24px;
+          font-weight: 400;
+          text-transform: capitalize;
+          padding: 10px 20px;
+          transform: all 4s ease;
+          color: #2c2c2c;
+        }
+
+        .navicon a:hover{
+          color: #EE1C47;
+        }
+        .bx-menu{
+          font-size: 35px;
+          cursor: pointer;
+        }
+      section{
+          padding: 5%  10%;
+        }
+        .maintext{
+          width:100%;
+          height: 100vh;
+          background-image: url(images/fashion\ \(Banner\ \(Landscape\)\).png);
+          background-position: center;
+          background-size: cover;
+          display:grid;
+          grid-template-columns: repeat(1,1fr);
+          align-items: center;
+        }
+        .text{
+          position: absolute;
+        }
+
+        .text h4{
+          font-size: 25px;
+          text-transform: capitalize;
+          color:#D5712D;
+          line-height: 1.1;
+          font-weight: 600;
+        }
+        .text h1{
+          font-size: 65px;
+          text-transform: capitalize;
+          color:black;
+          line-height: 1.1;
+          font-weight: 600;
+          margin:6px 0px 10px;
+
+        }.text p{
+          font-size: 20px;
+          text-transform: capitalize;
+          color:2c2c2c;
+           font-style: italic;
+           margin-bottom: 20px;
+
+        }
+        .btn{
+          font-size: 20px;
+          text-transform: capitalize;
+          color:#111;
+          border: 2px solid #111;
+          transition: all .42s ease;
+          padding: 12px 20px;
+          border-radius: 10px;
+        }  
+        .btn i{
+          vertical-align: middle;
+        }
+        .btn:hover{
+          background-color: #111;
+          color: #fff;
+        }
+        .downarrow{
+          position: absolute;
+          top:85%;
+          right:11%;
+            
+        }
+  .downarrow i{
+    border: 2px solid #111;
+    color: #111;
+    border-radius: 50px;
+    font-size: 20px;
+    padding: 12px 12px;
+  }
+  .downarrow i:hover{
+          background-color: #111;
+          color: #fff;
+        }
+        img{
+          width:350px;
+          height:400px;
+        }
+            header.sticky{
+             background:#fff ;
+             padding:20px 10%;
+             box-shadow: 0px 0px 10px rgba(0 0 0/10%);
+            }
+             .center h1{
+              font-size: 25px;
+            text-transform: capitalize;
+            color: #2c2c2c;
+            text-align: center;
+            margin-bottom: 30px;
+             }
+             .center span{
+              color:#EE1C47
+             }
+
+          .product{
+            display:grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,auto));
+            gap:3rem;
+          }
+             .row{
+              position: relative;
+              transition: all .40s ;
+             }
+               .row img{
+                width:100%;
+                height:auto;
+                transition:all.40s;
+
+               }
+                .row img:hover{
+                  transform: scale(0.9);
+                }
+               .producttext h5{
+                position:absolute;
+                top:13px;
+                left:13px;
+                color:#fff;
+                background-color:#27b737 ;
+                text-transform: uppercase;
+                font-size: 12px;
+                font-weight: 500;
+                padding:3px 10px;
+                border-radius: 3px;
+               }
+                 .hearticon{
+                  position:absolute;
+                  right:0;
+                  font-size:20px
+                 }  
+                   .hearticon:hover{
+                    color: #EE1C47;
+                    cursor: pointer;
+                   }
+
+              .ratting i{
+                font-size: 20px;
+                color: yellow;
+              }
+               .price h5{
+                font-size:18px;
+                font-weight:400;
+                color: #111;
+                text-transform: capitalize;
+               }
+                .price{
+                  font-size: 16px;
+                  font-weight: 600;
+                  color: #2c2c2c;
+                }
+                .contact{
+                  background-color: #f3f4f6;
+                }
+                .contactinfo{
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit,minmax(160px,auto));
+                   gap: 3rem;
+                }
+                .logo1{
+                  width: 140px;
+                  height:auto;
+                    font-size: 35px;
+                    font-weight: 500;
+                    color: #2c2c2c;
+                }
+                 .contactinfo h4{
+                  font-size: 20px;
+                  font-weight: 600;
+                  text-transform: capitalize;
+                  margin-bottom: 20px;
+                 }
+
+                 .contactinfo p{
+                  cursor: pointer;
+                  color: #2c2c2c;
+                  line-height: 1.5;
+                  transition: all .42s;
+                  font-size: 16px;
+                  font-weight: 400;
+                  margin-bottom: 10px;
+                 }  
+                 
+                 .contactinfo p:hover{
+                  color: #EE1C47;
+                 }
+                  .social-icon i{
+                    color: #2c2c2c;
+                    margin-right: 10px;
+                    transition: all .42s;
+                    font-size: 20px;
+                  }
+                  .social-icon i:hover{
+                    transform: scale(1.3);
+                  } 
+                    .endtext{
+                     text-align: center;
+                       background-color: #edfff1;
+                       padding: 20px;
+                       
+                    }
+                    .endtext a{
+                      color:#111;
+                      text-decoration: underline;
+                      padding: 5px;
+                    }
+                    .endtext a:hover{
+                      color: #EE1C47;
+                    }
+                      
+  </style>       
+   
+  
+</head>
+<body>
+        <header>
+           <a href="#" class="logo">Ecommerce</a>
+           <ul class="navmenu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Product</a></li>
+           </ul>
+              <div class="navicon">
+                <a href="#"><i class='bx bx-search'></i></a>
+                <a href="#"><i class='bx bx-user'></i></a>
+                <a href="#"><i class='bx bx-cart'></i></a>
+                <a href="#"><i class='bx bx-menu' ></i></a>
+   </div>
+        </header>
+
+               <section class="maintext">
+                <div class="text">
+                  <h4>NEW COLLECTION</h4>
+                  <h1>New Rival 2024</h1>
+                  <p>All special product</p>
+                  <a href="#" class="btn">Shop Now<i class='bx bx-right-arrow-alt'></i></a>
+                </div>
+                 <div>
+                  <a href="#trending" class="downarrow"><i class='bx bx-down-arrow-alt'></i></a>
+                 </div>
+               </section>
+            
+               
+  <section class="trending-product" id="trending">
+     <div class="center">
+          <h1>Our Trending <span>Product</span> </h1>
+     </div>
+
+        <div class="product">
+         <div class="row">
+             <img src="images/p11.jpg">
+             <div class="producttext"><h5>New</h5></div>
+             <div class="hearticon"><i class='bx bx-heart'></i></div>
+             <div class="ratting">
+              <i class='bx bx-star'></i>
+              <i class='bx bx-star'></i>
+              <i class='bx bx-star'></i>
+              <i class='bx bxs-star-half' ></i>
+             </div>
+             <div class="price">
+              <h5>Half running set</h5>
+              <p>$99-$130</p>
+             </div>
+         </div>
+
+
+         <div class="row">
+          <img src="images/p13.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p2.jpg">
+          <div class="producttext"><h5>Hot</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p4.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p5.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p6.jpg">
+          <div class="producttext"><h5>New</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p7.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p8.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+   
+        
+
+
+        
+
+        <div class="row">
+          <img src="images/p1.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        
+
+        <div class="row">
+          <img src="images/p3.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p9.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <img src="images/p10.jpg">
+          <div class="producttext"><h5>Sale</h5></div>
+          <div class="hearticon"><i class='bx bx-heart'></i></div>
+          <div class="ratting">
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bx-star'></i>
+           <i class='bx bxs-star-half' ></i>
+          </div>
+          <div class="price">
+           <h5>Half running set</h5>
+           <p>$99-$130</p>
+          </div>
+        </div>
+
+        </div>
+
+  </section>
+       <script class="java.js">
+        const header=document.querySelector("header")
+        window.addEventListener("scroll", function(){
+         header.classList.toggle( "sticky",this.window.scrollY>0)
+       })
+       </script>
+           
+           <section class="contact">
+                 <div class="contactinfo">
+                  <div class="firstinfo">
+                  <a href="#" class="logo1">Ecommerce</a>
+                  <p> 212  East Legon , <br> Accra 2313 Est. </p>
+                  <p>0556949312</p>
+                  <p>emmanuelkojo@gmail.com</p>
+
+                  <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                  </div>
+                  </div>
+                        
+                  <div class="secondinfo">
+                  <h4>Support</h4>
+                  <p>Contact Us</p>
+                  <p>Privacy</p>
+                  <p>Shopping & Return</p>
+                  </div>
+
+                  <div class="thirdinfo">
+                    <h4>Shop</h4>
+                    <p>Men's Shopping</p>
+                    <p>Women's Shopping</p>
+                    <p>Shoes</p>
+                    <p>Kid's Shopping</p>
+                    <p>Discount</p>
+                    </div>
+ 
+                    <div class="fourthinfo">
+                      <h4>Company</h4>
+                      <p>About</p>
+                      <p>Affiliate</p>
+                      <p>Blog</p>
+                      <p>Login</p>
+                      <p>Press</p>
+                      </div>
+
+                      <div class="Fiveinfo">
+                        <h4>Subscribe</h4>
+                        <p>Hot deal </p>
+                        <p> Receive Update </p>
+                        <p>New sale</p>
+                        </div>
+                 </div>
+                
+           </section>
+
+           <div class="endtext">
+                <p>Copyright © 2000-2024, Ecormence. All rights reserved. User Agreement <a href="#">Privacy Notice</a> <a href="#">Community Guidelines</a>  <a href="#">Accessibility</a></p>
+           </div>
+</body>
+</html>

@@ -73,7 +73,7 @@
         .maintext{
           width:100%;
           height: 100vh;
-          background-image: url(images/fashion\ \(Banner\ \(Landscape\)\).png);
+          background-image: url('images/fashion(Banner(Landscape)).png');
           background-position: center;
           background-size: cover;
           display:grid;
@@ -273,6 +273,16 @@
                     .endtext a:hover{
                       color: #EE1C47;
                     }
+
+                    @media (max-width: 768px) {
+   .navmenu {
+      display: none; /* Hide menu items */
+   }
+   .navicon {
+      display: block; /* Show icon for mobile menu */
+   }
+}
+
                       
   </style>       
    
@@ -519,9 +529,11 @@
   </section>
        <script class="java.js">
         const header=document.querySelector("header")
-        window.addEventListener("scroll", function(){
-         header.classList.toggle( "sticky",this.window.scrollY>0)
-       })
+        window.addEventListener("scroll", function() {
+   header.classList.toggle("sticky", window.scrollY > 0);
+});
+
+       
        </script>
            
            <section class="contact">
